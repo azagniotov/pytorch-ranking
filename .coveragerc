@@ -1,0 +1,23 @@
+[paths]
+source =
+    src
+    */site-packages
+
+[run]
+branch = true
+source =
+    src
+parallel = true
+omit =
+    src/__init__.py
+    src/**/__init__.py
+    src/**/*/__init__.py
+    src/__main__.py
+    src/entry_point.py
+
+[report]
+show_missing = true
+precision = 2
+omit = *migrations*
+exclude_lines = 
+    if __name__ == .__main__.:
